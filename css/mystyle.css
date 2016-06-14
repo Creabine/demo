@@ -48,7 +48,21 @@ body{
 	font-size: 20px;
 }
 .myhead{
-	margin-top: 100px;
+	padding-top: 180px;
+}
+h1{
+	color: white;
+	font-family: 'Lora';
+}
+.contact{
+	padding-top: 200px;
+	font-size: 30px;
+	font-weight: 700;
+	color: white;
+}
+.contact-img{
+	width: 50px;
+	height: 50px;
 }
 .headfontsize{
 	color: white;
