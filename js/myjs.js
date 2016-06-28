@@ -1,36 +1,45 @@
 $(document).ready(function(){
-	//用来初始化弹出框，不然无效
-	$('[data-toggle="popover"]').popover();
+	var myDate = new Date();
+
+	second_move(350,350,350,"game",-90,40,50);
+	second_move(350,350,350,"music",90,40,50);
+	second_move(350,350,350,"myself",-30,40,50);
+	second_move(350,350,350,"ACG",60,40,50);
+	second_move(350,350,350,"movie",150,40,50);
+	second_move(350,350,350,"Japanese",210,40,50);
 
 
-
-	$("#page1-ziliao").click(function() {
-		$('body').animate({scrollTop:0},250);
-		$("#page1-ziliao").css("backgroundColor","white");
-		$("#page2-jingyan,#page3-jingli,#page4-baozou").css("backgroundColor","#9C58B6");
-	});
-	$("#page2-jingyan").click(function() {
-		$('body').animate({scrollTop:900},250);  
-		$("#page2-jingyan").css("backgroundColor","white");
-		$("#page1-ziliao,#page3-jingli,#page4-baozou").css("backgroundColor","#9C58B6");
-	});
-
-	$("#page3-jingli").click(function() {
-		$('body').animate({scrollTop:1800},250);  
-		$("#page3-jingli").css("backgroundColor","white");
-		$("#page2-jingyan,#page1-ziliao,#page4-baozou").css("backgroundColor","#9C58B6");
-	});
-
-	$("#page4-baozou").click(function() {
-		$('body').animate({scrollTop:2700},250);  
-		$("#page4-baozou").css("backgroundColor","white");
-		$("#page2-jingyan,#page3-jingli,#page1-ziliao").css("backgroundColor","#9C58B6");
-	});
-
-
+	
 
 }); 
 
+//参数分别为：恒星坐标，环绕半径，卫星id，卫星初始角度，卫星半径，移动间隔。
+function second_move(X,Y,R,id,deg,r1,time){ 
 
+	var round = $('#' + id);
+	var r = R; // 半径
+	var x = X; // 园的中心点 x 坐标   中心点就是.dashboard的中心
+	var y = Y; // 园的中心点 y 坐标
+	
+	var deg = deg; // 起始角度
+	
+	setInterval(function(){
+		
+		deg++
+		
+		//Math.sin( deg*Math.PI/180 ) = a/r;
+		//Math.cos( deg*Math.PI/180 ) = b/r;
+		
+		// 算出圆周上每一个 A 的 x,y 轴
+		var a = Math.sin( deg*Math.PI/180 ) * r;
+		var b = Math.cos( deg*Math.PI/180 ) * r;
+		
+		// 算出 圆周上每一个 A 的坐标。这里的40是因为div定位原点是左上角，这里要变成中点。
+		//长宽都是80，所以中点就是各自减去40
+		round.css('left', x + b -r1 + 'px');
+		round.css('top', y + a -r1 + 'px');
 
+		
+	},time);
+}
 

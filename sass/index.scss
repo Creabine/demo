@@ -1,0 +1,45 @@
+@charset "utf-8";
+//reset
+@import "compass/reset";
+//css3
+@import "compass/css3";
+//变量
+$text_border: 1px red solid;
+
+
+body{
+	background-color:#fff;
+	width:1000px;
+	height:100%;
+	margin:0 auto;
+}
+.dashboard{
+	margin:0 auto;
+	position:relative;
+	top:100px;
+	border:$text_border;
+	@include border-radius(350px);
+	width:700px;
+	height:700px;
+}
+.head{
+	@include border-radius(100px);
+	width:200px;
+	height:200px;
+	//border:$text_border;
+	margin:0 auto;
+	position:relative;
+	top:250px;
+}
+#game{position:absolute; left:310px; top:-40px;}
+#music{position:absolute; left:310px; top:660px;}
+#ACG{position:absolute; left:310px; top:660px;}
+#movie{position:absolute; left:310px; top:660px;}
+#Japanese{position:absolute; left:310px; top:660px;}
+#myself{position:absolute; left:310px; top:660px;}
+.rounded{
+	@include border-radius(40px);
+	width:80px;
+	height:80px;
+	border:$text_border;
+}

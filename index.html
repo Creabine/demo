@@ -4,134 +4,33 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>Creabine</title>
     <link rel="shortcut icon" href="images/Creabine.ico" type="image/x-icon"/>  
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/mystyle.css" rel="stylesheet">
+    <!-- css -->
+    <link href="stylesheets/index.css" rel="stylesheet">
+    <link href="stylesheets/mysprites.css" rel="stylesheet">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-2.2.0.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
     <script src="js/myjs.js"></script>
   </head>
   <body>
 
-<!--导航条代码-->
-<!-- 使用nav标签标示导航   使用role来提高可读性    class分别标示：nva导航 navbar-inverse黑底白字  navbar-fixed-tops使用fixed固定在顶端 -->
-<nav role="navigation" class="nav navbar-inverse navbar-fixed-top">
-  <!-- container容器，有这个导航中的内容会相对居中，没搞清楚为啥？？？？？？？？？？？？？？？？？？？？？？？？？？ -->
-  <div class="container">
-  <!-- 使用navbar-header使文本看起来大一号 -->
-    <div class="navbar-header">
-      <!-- .navbar-toggle样式用于toggle改变大小时要收放的内容，当显示区域小的时候内容折叠为按钮。dota-toggle标示js对按钮做什么，data-target标示目标元素 -->
-           <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-responsive-collapse">
-             <span class="sr-only">Toggle Navigation</span>
-             <!-- 下边这三个icon-bar构成那个三个横线的汉堡按钮。他们会切换为nav-collapse中的元素 -->
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-           </button>
-           <!-- 单独放置，确保无论是宽屏还是窄屏，navbar-brand都显示 -->
-           <a href="index.html" class="navbar-brand">Home</a>
-    </div>
-     <!-- 屏幕宽度小于768px时，#navbar-responsive-collapse容器里的内容都会隐藏，显示icon-bar图标，当点击icon-bar图标时，再展开。屏幕大于768px时，默认显示。 -->
-     <!-- 要折叠的内容要包含在 collapse navbar-collapse中，给他id，上边的data-target好找到他 -->
-    <div id="navbar-responsive-collapse" class="collapse navbar-collapse">
-          <!-- 为导航栏添加链接，只要添加有nav navbar-nav的无序列表即可 -->
-          <ul class="nav navbar-nav">
-              <!-- 这里的.active类是默认点中的状态，其他几个没有，可以看出差别。   将下拉菜单触发器和下拉菜单都包裹在 .dropdown 里。 -->
-              <li class="active dropdown">
-                  <!-- 下拉菜单的按钮dropdown-toggle表示 -->
-                  <a href="#" class="dropdonw-toggle" data-toggle="dropdown">test<span class="caret"></span></a>
-                  <!-- 这里dorpdown表示下拉菜单主体，默认左对齐 -->
-                  <ul class="dropdown-menu" role="menu">
-                      <!-- dorpdown-header表示先拉菜单的标题，不可点击。 -->
-                      <li class="dropdown-header">test</li>
-                      <li><a href="#">test</a></li>
-                      <!-- 这里的空li带着.divider表示分隔线 -->
-                      <li class="divider"></li>
-                      <!-- 这里本来想做一个下拉菜单的子菜单，但是没成功？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？ -->
-                      <li class="dropdown-submenu">
-                          <a href="#">test</a>
-                          <ul class="dropdown-menu">
-                            <li>test</li>
-                            <li>test</li>
-                          </ul>
-                      </li>
-                      <li class="divider"></li>
-                      <!-- disabled 表示禁用类 -->
-                      <li class="disabled"><a href="#">test</a></li>
-                  </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdonw-toggle" data-toggle="dropdown">作品推荐<span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#"><abbr title="Animation、Comic、Game">ACG</abbr></a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">电影</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">小说</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">剧集</a></li>
-                </ul>
-              </li>
-
-              <li class="dropdown">
-                <a href="#" class="dropdonw-toggle" data-toggle="dropdown">业余爱好<span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">音乐 </a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">篮球、跑步、游泳</a></li> 
-                  <li class="divider"></li>
-                  <li><a href="#">读书、电影、动漫、游戏</a></li> 
-
-                </ul>
-              </li>
-          </ul>
-      </div>
-
-</nav>
-
-<!-- 第一页个人资料部分 -->
-    <div class="container page1bg"  id="page1-bgimg">
-
-
-
-      <div class="myhead  text-center">
-          <img src="images/myhead.png" alt="二次元的我" class="img-circle">
-      </div>
-
-      <h1 class="text-center">Creabine</h1>
-
-      <hr />
-
-      <div class="row contact">
-          <div class="col-md-1 col-md-offset-4">
-              <a target="_blank" href="http://blog.csdn.net/creabine">
-                  <img  id="icon_csdn" src="images/csdn.jpg" alt="二次元的我" class="img-circle contact-img center-block">
-              </a>
-          </div>
-          <div class="col-md-1">
-              <a target="_blank" href="https://www.zhihu.com/people/kong-bu-xiao-chong">
-                  <img id="icon_zhihu" src="images/zhihu.png" alt="二次元的我" class="img-circle contact-img center-block">
-              </a>
-          </div>
-          <div class="col-md-1">
-              <img id="icon_weixin" src="images/weixin.png" alt="二次元的我" class="img-circle contact-img center-block">
-          </div>
-          <div class="col-md-1">
-              <a target="_blank" href="https://github.com/Creabine">
-                  <img id="icon_github" src="images/github.png" alt="二次元的我" class="img-circle contact-img center-block">
-              </a>
-          </div>
-      </div>
-
+    <div class="dashboard">
+      <div class="head mysprites-myhead"></div>
+      <div id="game" class="rounded  mysprites-github"></div>
+      <div id="music" class="rounded  mysprites-github"></div>
+      <div id="myself" class="rounded  mysprites-github"></div>
+      <div id="ACG" class="rounded  mysprites-github"></div>
+      <div id="movie" class="rounded  mysprites-github"></div>
+      <div id="Japanese" class="rounded  mysprites-github"></div>
 
     </div>
-
 
     
+    
+
+
+
+   
   </body>
 </html>
