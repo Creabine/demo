@@ -17,10 +17,10 @@ body{
 	margin:0 auto;
 	position:relative;
 	top:100px;
-	border:$text_border;
+	//border:$text_border;
 	@include border-radius(350px);
 	width:700px;
-	height:700px;
+	height:800px;
 }
 .head{
 	@include border-radius(100px);
@@ -31,15 +31,30 @@ body{
 	position:relative;
 	top:250px;
 }
-#game{position:absolute; left:310px; top:-40px;}
-#music{position:absolute; left:310px; top:660px;}
+#myself{position:absolute; left:310px; top:-40px;}
+#music{position:absolute; left:616px; top:140px;}
+#game{position:absolute; left:610px; top:490px;}
 #ACG{position:absolute; left:310px; top:660px;}
-#movie{position:absolute; left:310px; top:660px;}
-#Japanese{position:absolute; left:310px; top:660px;}
-#myself{position:absolute; left:310px; top:660px;}
+#movie{position:absolute; left:4px; top:480px;}
+#Japanese{position:absolute; left:10px; top:130px;}
+
 .rounded{
 	@include border-radius(40px);
 	width:80px;
 	height:80px;
+	border:$text_border;
+}
+
+//日期时间
+.date{
+	position:absolute;
+	left:255px;
+	top:200px;
+	border:$text_border;
+}
+.time{
+	position:absolute;
+	left:310px;
+	top:500px;
 	border:$text_border;
 }

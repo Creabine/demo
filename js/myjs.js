@@ -1,12 +1,39 @@
 $(document).ready(function(){
 	var myDate = new Date();
+	myDate.myyear = myDate.getFullYear();
+	myDate.mymonth = myDate.getMonth();
+	myDate.myday = myDate.getDate();
+	myDate.week = myDate.getDay();
+	myDate.myhouur = myDate.getHours()
+	myDate.myminute = myDate.getMinutes();
+	myDate.mysecond = myDate.getSeconds();
 
-	second_move(350,350,350,"game",-90,40,50);
-	second_move(350,350,350,"music",90,40,50);
-	second_move(350,350,350,"myself",-30,40,50);
-	second_move(350,350,350,"ACG",60,40,50);
-	second_move(350,350,350,"movie",150,40,50);
-	second_move(350,350,350,"Japanese",210,40,50);
+	//var mymonth = ["Jan.","Feb.","Mar.","Apr.","May.","Jun.","Jul.","Aug.","Sep.","Oct.","Nov.","Dec."];
+	var myweek = ["星期一","星期二","星期三","星期四","星期五","星期六","星期日"];
+
+
+
+
+
+	//更新显示时间
+	$("#year").text(myDate.myyear);
+	$("#month").text(myDate.mymonth);
+	$("#day").text(myDate.myday);
+	$("#week").text(myweek[myDate.week]);
+	$("#hour").text(myDate.myhouur);
+	$("#minute").text(myDate.myminute);
+	$("#second").text(myDate.mysecond);
+
+
+
+
+
+	// second_move(350,350,350,"myself",-90,40,50);
+	// second_move(350,350,350,"music",90,40,50);
+	// second_move(350,350,350,"game",-30,40,50);
+	// second_move(350,350,350,"ACG",30,40,50);
+	// second_move(350,350,350,"movie",150,40,50);
+	// second_move(350,350,350,"Japanese",210,40,50);
 
 
 	
