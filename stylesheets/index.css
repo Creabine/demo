@@ -63,7 +63,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 10, ../sass/index.scss */
+@font-face {
+  font-family: 'hooray';
+  src: url("../fonts/hooray.eot");
+  src: url("../fonts/hooray.eot?#iefix") format("eot"), url("../fonts/hooray.woff") format("woff"), url("../fonts/hooray.ttf") format("truetype"), url("../fonts/hooray.svg#webfontjKg17VrE") format("svg");
+}
+/* line 16, ../sass/index.scss */
 body {
   background-color: #fff;
   width: 1000px;
@@ -71,7 +76,7 @@ body {
   margin: 0 auto;
 }
 
-/* line 16, ../sass/index.scss */
+/* line 23, ../sass/index.scss */
 .dashboard {
   margin: 0 auto;
   position: relative;
@@ -83,7 +88,7 @@ body {
   height: 800px;
 }
 
-/* line 25, ../sass/index.scss */
+/* line 32, ../sass/index.scss */
 .head {
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
@@ -95,70 +100,111 @@ body {
   top: 250px;
 }
 
-/* line 34, ../sass/index.scss */
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+/* line 49, ../sass/index.scss */
 #myself {
   position: absolute;
   left: 310px;
   top: -40px;
+  animation: showup 5s 1 3s;
+  animation-fill-mode: forwards;
 }
 
-/* line 35, ../sass/index.scss */
-#music {
-  position: absolute;
-  left: 616px;
-  top: 140px;
-}
-
-/* line 36, ../sass/index.scss */
-#game {
-  position: absolute;
-  left: 610px;
-  top: 490px;
-}
-
-/* line 37, ../sass/index.scss */
-#ACG {
-  position: absolute;
-  left: 310px;
-  top: 660px;
-}
-
-/* line 38, ../sass/index.scss */
-#movie {
-  position: absolute;
-  left: 4px;
-  top: 480px;
-}
-
-/* line 39, ../sass/index.scss */
+/* line 50, ../sass/index.scss */
 #Japanese {
   position: absolute;
   left: 10px;
   top: 130px;
+  animation: showup 5s 1 4s;
+  animation-fill-mode: forwards;
 }
 
-/* line 41, ../sass/index.scss */
+/* line 51, ../sass/index.scss */
+#movie {
+  position: absolute;
+  left: 4px;
+  top: 480px;
+  animation: showup 5s 1 5s;
+  animation-fill-mode: forwards;
+}
+
+/* line 52, ../sass/index.scss */
+#music {
+  position: absolute;
+  left: 616px;
+  top: 140px;
+  animation: showup 5s 1 6s;
+  animation-fill-mode: forwards;
+}
+
+/* line 53, ../sass/index.scss */
+#ACG {
+  position: absolute;
+  left: 310px;
+  top: 660px;
+  animation: showup 5s 1 7s;
+  animation-fill-mode: forwards;
+}
+
+/* line 54, ../sass/index.scss */
+#game {
+  position: absolute;
+  left: 610px;
+  top: 490px;
+  animation: showup 5s 1 8s;
+  animation-fill-mode: forwards;
+}
+
+/* line 58, ../sass/index.scss */
 .rounded {
+  opacity: 0;
   -moz-border-radius: 40px;
   -webkit-border-radius: 40px;
   border-radius: 40px;
   width: 80px;
   height: 80px;
-  border: 1px red solid;
 }
 
-/* line 49, ../sass/index.scss */
-.date {
+@keyframes time_showup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 72, ../sass/index.scss */
+.date, .time {
+  font-family: 'hooray';
+  opacity: 0;
   position: absolute;
-  left: 255px;
-  top: 200px;
-  border: 1px red solid;
+  left: 220px;
+  top: 470px;
+  font-size: 40px;
+  animation: time_showup 5s 1 1s;
+  animation-fill-mode: forwards;
 }
 
-/* line 55, ../sass/index.scss */
+/* line 84, ../sass/index.scss */
 .time {
-  position: absolute;
-  left: 310px;
-  top: 500px;
-  border: 1px red solid;
+  left: 270px;
+  top: 200px;
+  animation: time_showup 5s 1 2s;
+  animation-fill-mode: forwards;
 }

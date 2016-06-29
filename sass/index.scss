@@ -5,9 +5,16 @@
 @import "compass/css3";
 //变量
 $text_border: 1px red solid;
-
-
+@font-face {
+    font-family: 'hooray';
+    src: url('../fonts/hooray.eot');
+    src: url('../fonts/hooray.eot?#iefix') format('eot'),
+         url('../fonts/hooray.woff') format('woff'),
+         url('../fonts/hooray.ttf') format('truetype'),
+         url('../fonts/hooray.svg#webfontjKg17VrE') format('svg');
+}
 body{
+	
 	background-color:#fff;
 	width:1000px;
 	height:100%;
@@ -31,30 +38,53 @@ body{
 	position:relative;
 	top:250px;
 }
-#myself{position:absolute; left:310px; top:-40px;}
-#music{position:absolute; left:616px; top:140px;}
-#game{position:absolute; left:610px; top:490px;}
-#ACG{position:absolute; left:310px; top:660px;}
-#movie{position:absolute; left:4px; top:480px;}
-#Japanese{position:absolute; left:10px; top:130px;}
+@keyframes showup{
+	0% {opacity:0;}
+	25% {opacity:0.5;}
+	50% {opacity:1;}
+	75% {opacity:0.5;}
+	100% {opacity:0.8;}
+
+}
+#myself{position:absolute; left:310px; top:-40px;animation:showup 5s 1 3s;animation-fill-mode : forwards; }
+#Japanese{position:absolute; left:10px; top:130px;animation:showup 5s 1 4s;animation-fill-mode : forwards; }
+#movie{position:absolute; left:4px; top:480px;animation:showup 5s 1 5s;animation-fill-mode : forwards; }
+#music{position:absolute; left:616px; top:140px;animation:showup 5s 1 6s;animation-fill-mode : forwards; }
+#ACG{position:absolute; left:310px; top:660px;animation:showup 5s 1 7s;animation-fill-mode : forwards; }
+#game{position:absolute; left:610px; top:490px;animation:showup 5s 1 8s;animation-fill-mode : forwards; }
+
+
 
 .rounded{
+	opacity:0;
 	@include border-radius(40px);
 	width:80px;
 	height:80px;
-	border:$text_border;
+	//border:$text_border;
+}
+@keyframes time_showup{
+	from {opacity:0;}
+	to {opacity:1;}
 }
 
+
 //日期时间
-.date{
+.date,.time{
+	font-family:'hooray';
+	opacity:0;
 	position:absolute;
-	left:255px;
-	top:200px;
-	border:$text_border;
+
+	left:220px;
+	top:470px;
+	font-size:40px;
+	//border:$text_border;
+	animation:time_showup 5s 1 1s;
+	animation-fill-mode : forwards; 
 }
 .time{
-	position:absolute;
-	left:310px;
-	top:500px;
-	border:$text_border;
+	
+	left:270px;
+	top:200px;
+	animation:time_showup 5s 1 2s;
+	animation-fill-mode : forwards; 
 }
