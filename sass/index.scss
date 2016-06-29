@@ -29,6 +29,15 @@ body{
 	width:700px;
 	height:800px;
 }
+@keyframes headshowup{
+	0% {opacity:0;}
+	25% {opacity:0.1;}
+	50% {opacity:0.3;}
+	75% {opacity:0.6;}
+	100% {opacity:0.9;}
+
+}
+
 .head{
 	@include border-radius(100px);
 	width:200px;
@@ -37,13 +46,20 @@ body{
 	margin:0 auto;
 	position:relative;
 	top:250px;
+	opacity:0;
+	animation:headshowup 5s 1;
+	animation-fill-mode : forwards; 
+	transition: all 0.5s;
+	&:hover{
+		transform: rotateY(180deg);
+	}
 }
+
 @keyframes showup{
 	0% {opacity:0;}
-	25% {opacity:0.5;}
-	50% {opacity:1;}
-	75% {opacity:0.5;}
-	100% {opacity:0.8;}
+	33% {opacity:0.3;}
+	66% {opacity:0.6;}
+	100% {opacity:0.9;}
 
 }
 #myself{position:absolute; left:310px; top:-40px;animation:showup 5s 1 3s;animation-fill-mode : forwards; }
@@ -54,13 +70,23 @@ body{
 #game{position:absolute; left:610px; top:490px;animation:showup 5s 1 8s;animation-fill-mode : forwards; }
 
 
+@keyframes rounded_hover{
+	0% {opacity:0;}
+	25% {opacity:0.5;}
+	50% {opacity:1;}
+	75% {opacity:0.5;}
+	100% {opacity:0.8;}
 
+}
 .rounded{
 	opacity:0;
 	@include border-radius(40px);
 	width:80px;
 	height:80px;
 	//border:$text_border;
+	&:hover{
+		box-shadow: 0px 0px 20px #0CC;
+	}
 }
 @keyframes time_showup{
 	from {opacity:0;}
@@ -82,7 +108,7 @@ body{
 	animation-fill-mode : forwards; 
 }
 .time{
-	
+
 	left:270px;
 	top:200px;
 	animation:time_showup 5s 1 2s;
