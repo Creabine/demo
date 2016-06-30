@@ -1,9 +1,15 @@
 	var move_count = 1;
 $(document).ready(function(){
 
+	//welcome 11s later hide & dashboard show
+	setTimeout(function(){
+		$(".welcome").hide();
+		$(".dashboard").show();
+	},11000);
 	
+	//clock
 	var move = setInterval(update,1000);
-
+	//stop rounded
 	setTimeout(function(){
 		$(".dashboard").on('mouseover', function(event) {
 			clearInterval(move);
