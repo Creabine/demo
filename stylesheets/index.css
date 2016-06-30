@@ -78,76 +78,8 @@ body {
   margin: 0 auto;
 }
 
-/* line 33, ../sass/index.scss */
-.welcome {
-  margin: 0 auto;
-  width: 1100px;
-  height: 600px;
-  margin: 100px;
-  text-align: center;
-  font-size: 70px;
-}
-
-@keyframes welcome_animation {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-    font-size: 75px;
-  }
-  75% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-    font-size: 80px;
-  }
-}
-/* line 51, ../sass/index.scss */
-.welcome1, .welcome2, .welcome3, .welcome4, .welcome5 {
-  opacity: 0;
-  width: 1000px;
-  position: absolute;
-  top: 350px;
-}
-
-/* line 57, ../sass/index.scss */
-.welcome1 {
-  animation: welcome_animation 2s linear 2s;
-  animation-fill-mode: forwards;
-}
-
-/* line 61, ../sass/index.scss */
-.welcome2 {
-  animation: welcome_animation 2s linear 4s;
-  animation-fill-mode: forwards;
-}
-
-/* line 65, ../sass/index.scss */
-.welcome3 {
-  animation: welcome_animation 2s linear 6s;
-  animation-fill-mode: forwards;
-}
-
-/* line 69, ../sass/index.scss */
-.welcome4 {
-  animation: welcome_animation 2s linear 8s;
-  animation-fill-mode: forwards;
-}
-
-/* line 73, ../sass/index.scss */
-.welcome5 {
-  animation: welcome_animation 2s linear 10s;
-  animation-fill-mode: forwards;
-}
-
-/* line 84, ../sass/index.scss */
+/* line 38, ../sass/index.scss */
 .dashboard {
-  display: none;
   margin: 0 auto;
   position: relative;
   top: 100px;
@@ -176,7 +108,7 @@ body {
     opacity: 0.9;
   }
 }
-/* line 104, ../sass/index.scss */
+/* line 57, ../sass/index.scss */
 .head {
   -moz-border-radius: 100px;
   -webkit-border-radius: 100px;
@@ -191,7 +123,7 @@ body {
   animation-fill-mode: forwards;
   transition: all 0.5s;
 }
-/* line 116, ../sass/index.scss */
+/* line 69, ../sass/index.scss */
 .head:hover {
   transform: rotateY(180deg);
 }
@@ -210,7 +142,7 @@ body {
     opacity: 0.9;
   }
 }
-/* line 128, ../sass/index.scss */
+/* line 81, ../sass/index.scss */
 #myself {
   position: absolute;
   left: 310px;
@@ -219,7 +151,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-/* line 129, ../sass/index.scss */
+/* line 82, ../sass/index.scss */
 #Japanese {
   position: absolute;
   left: 10px;
@@ -228,7 +160,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-/* line 130, ../sass/index.scss */
+/* line 83, ../sass/index.scss */
 #movie {
   position: absolute;
   left: 4px;
@@ -237,7 +169,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-/* line 131, ../sass/index.scss */
+/* line 84, ../sass/index.scss */
 #music {
   position: absolute;
   left: 616px;
@@ -246,7 +178,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-/* line 132, ../sass/index.scss */
+/* line 85, ../sass/index.scss */
 #ACG {
   position: absolute;
   left: 310px;
@@ -255,7 +187,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-/* line 133, ../sass/index.scss */
+/* line 86, ../sass/index.scss */
 #game {
   position: absolute;
   left: 610px;
@@ -281,7 +213,7 @@ body {
     opacity: 0.8;
   }
 }
-/* line 144, ../sass/index.scss */
+/* line 97, ../sass/index.scss */
 .rounded {
   opacity: 0;
   -moz-border-radius: 40px;
@@ -290,7 +222,7 @@ body {
   width: 80px;
   height: 80px;
 }
-/* line 150, ../sass/index.scss */
+/* line 103, ../sass/index.scss */
 .rounded:hover {
   box-shadow: 0px 0px 20px #0CC;
 }
@@ -303,7 +235,7 @@ body {
     opacity: 1;
   }
 }
-/* line 161, ../sass/index.scss */
+/* line 114, ../sass/index.scss */
 .date, .time {
   font-family: "hooray";
   font-size: 40px;
@@ -311,14 +243,14 @@ body {
   position: relative;
 }
 
-/* line 169, ../sass/index.scss */
+/* line 122, ../sass/index.scss */
 .date {
   top: 480px;
   animation: time_showup 2s linear 2s;
   animation-fill-mode: forwards;
 }
 
-/* line 174, ../sass/index.scss */
+/* line 127, ../sass/index.scss */
 .time {
   top: -20px;
   animation: time_showup 2s linear 3s;
