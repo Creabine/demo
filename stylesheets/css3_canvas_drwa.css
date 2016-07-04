@@ -295,12 +295,12 @@ p {
 /* line 191, ../sass/css3_canvas_drwa.scss */
 .leftarm {
   top: -340px;
-  left: 190px;
+  left: 188px;
   transform: rotate(35deg);
   border-left: 2px solid #02172D;
 }
 
-/* line 197, ../sass/css3_canvas_drwa.scss */
+/* line 198, ../sass/css3_canvas_drwa.scss */
 .rightarm {
   top: -410px;
   left: 330px;
@@ -308,7 +308,7 @@ p {
   border-right: 2px solid #02172D;
 }
 
-/* line 203, ../sass/css3_canvas_drwa.scss */
+/* line 205, ../sass/css3_canvas_drwa.scss */
 .lefthand, .righthand {
   width: 45px;
   height: 45px;
@@ -320,19 +320,19 @@ p {
   position: relative;
 }
 
-/* line 211, ../sass/css3_canvas_drwa.scss */
+/* line 213, ../sass/css3_canvas_drwa.scss */
 .lefthand {
   top: -440px;
   left: 170px;
 }
 
-/* line 215, ../sass/css3_canvas_drwa.scss */
+/* line 217, ../sass/css3_canvas_drwa.scss */
 .righthand {
   top: -485px;
   left: 345px;
 }
 
-/* line 219, ../sass/css3_canvas_drwa.scss */
+/* line 221, ../sass/css3_canvas_drwa.scss */
 .body {
   width: 140px;
   height: 130px;
@@ -352,7 +352,7 @@ p {
   left: 208px;
 }
 
-/* line 233, ../sass/css3_canvas_drwa.scss */
+/* line 235, ../sass/css3_canvas_drwa.scss */
 .stomach {
   width: 120px;
   height: 100px;
@@ -366,7 +366,7 @@ p {
   left: 8px;
 }
 
-/* line 243, ../sass/css3_canvas_drwa.scss */
+/* line 245, ../sass/css3_canvas_drwa.scss */
 .pocket {
   width: 100px;
   height: 50px;
@@ -382,7 +382,7 @@ p {
   left: 8px;
 }
 
-/* line 253, ../sass/css3_canvas_drwa.scss */
+/* line 255, ../sass/css3_canvas_drwa.scss */
 .bell {
   width: 40px;
   height: 40px;
@@ -396,7 +396,7 @@ p {
   left: 38px;
 }
 
-/* line 263, ../sass/css3_canvas_drwa.scss */
+/* line 265, ../sass/css3_canvas_drwa.scss */
 .bell1 {
   width: 40px;
   height: 1px;
@@ -406,7 +406,7 @@ p {
   left: -2px;
 }
 
-/* line 271, ../sass/css3_canvas_drwa.scss */
+/* line 273, ../sass/css3_canvas_drwa.scss */
 .bell2 {
   width: 10px;
   height: 10px;
@@ -420,7 +420,7 @@ p {
   left: 13px;
 }
 
-/* line 281, ../sass/css3_canvas_drwa.scss */
+/* line 283, ../sass/css3_canvas_drwa.scss */
 .bell3 {
   width: 2px;
   height: 10px;
@@ -430,7 +430,29 @@ p {
   left: 19px;
 }
 
-/* line 289, ../sass/css3_canvas_drwa.scss */
+/* line 291, ../sass/css3_canvas_drwa.scss */
+.coverleft, .coverright {
+  width: 20px;
+  height: 20px;
+  background-color: #2FA2E5;
+  position: relative;
+}
+
+/* line 298, ../sass/css3_canvas_drwa.scss */
+.coverleft {
+  top: -113px;
+  left: -17px;
+  transform: rotate(35deg);
+}
+
+/* line 303, ../sass/css3_canvas_drwa.scss */
+.coverright {
+  top: -132px;
+  left: 118px;
+  transform: rotate(325deg);
+}
+
+/* line 308, ../sass/css3_canvas_drwa.scss */
 .leftfoot, .rightfoot {
   width: 90px;
   height: 30px;
@@ -447,7 +469,27 @@ p {
   left: 190px;
 }
 
-/* line 300, ../sass/css3_canvas_drwa.scss */
+/* line 319, ../sass/css3_canvas_drwa.scss */
 .rightfoot {
   transform: rotateY(180deg);
+}
+
+/* line 322, ../sass/css3_canvas_drwa.scss */
+.leg1 {
+  width: 20px;
+  height: 2px;
+  background-color: #02172D;
+  position: relative;
+  top: 18px;
+  left: 53px;
+}
+
+/* line 331, ../sass/css3_canvas_drwa.scss */
+.leg2 {
+  width: 2px;
+  height: 20px;
+  background-color: #02172D;
+  position: relative;
+  top: 18px;
+  left: 63px;
 }

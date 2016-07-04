@@ -190,16 +190,18 @@ p{
 }
 .leftarm{
 	top:-340px;
-	left:190px;
+	left:188px;
 	transform:rotate(35deg);
 	border-left:$blackborder;
 }
+
 .rightarm{
 	top:-410px;
 	left:330px;
 	transform:rotate(325deg);
 	border-right:$blackborder;
 }
+
 .lefthand,.righthand{
 	width:45px;
 	height:45px;
@@ -286,6 +288,23 @@ p{
 	top:12px;
 	left:19px;
 }
+.coverleft,.coverright{
+	width:20px;
+	height:20px;
+	background-color:$bluecolor;
+	position:relative;
+	
+}
+.coverleft{
+	top:-113px;
+	left:-17px;
+	transform:rotate(35deg);
+}
+.coverright{
+	top:-132px;
+	left:118px;
+	transform:rotate(325deg);
+}
 .leftfoot,.rightfoot{
 	width:90px;
 	height:30px;
@@ -299,4 +318,21 @@ p{
 }
 .rightfoot{
 	transform:rotateY(180deg);
+}
+.leg1{
+	width:20px;
+	height:2px;
+	background-color:$blackcolor;
+	position:relative;
+	top:18px;
+	left:53px;
+}
+
+.leg2{
+	width:2px;
+	height:20px;
+	background-color:$blackcolor;
+	position:relative;
+	top:18px;
+	left:63px;
 }
