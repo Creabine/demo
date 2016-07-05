@@ -26,8 +26,8 @@ body{
 	float:left;
 	width:550px;
 	height:800px;
-	border:$testborder;
-	margin:50px 0 0 30px;
+	//border:$testborder;
+	margin:120px 0 0 30px;
 }
 p{
 	font-family:$miaowu;
@@ -335,4 +335,11 @@ p{
 	position:relative;
 	top:18px;
 	left:63px;
+}
+
+
+
+canvas{
+	//border:$testborder;
+	margin:70px 0 0 100px;
 }

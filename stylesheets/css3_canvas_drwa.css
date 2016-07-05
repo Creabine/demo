@@ -81,8 +81,7 @@ body {
   float: left;
   width: 550px;
   height: 800px;
-  border: 1px solid red;
-  margin: 50px 0 0 30px;
+  margin: 120px 0 0 30px;
 }
 
 /* line 32, ../sass/css3_canvas_drwa.scss */
@@ -492,4 +491,9 @@ p {
   position: relative;
   top: 18px;
   left: 63px;
+}
+
+/* line 342, ../sass/css3_canvas_drwa.scss */
+canvas {
+  margin: 70px 0 0 100px;
 }
