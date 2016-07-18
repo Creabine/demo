@@ -18,7 +18,7 @@
 <div style="height:auto;min-height:900px;position:relative;margin-top:50px;">
    <div class="change">
     	<div id="Template" class="change_tip_click">Template</div>
-    	<div id="Typing" class="change_tip">Typing</div>
+    	<div id="Typing" class="change_tip" onclick="create_size_option()">Typing</div>
 	   </div>
 	   <div style="clear:both;"></div>
 	   
@@ -659,6 +659,46 @@ function show_Measurement_info( i ){
 	$(".Measurement_main").hide();
 	//显示需要的
 	$("#Measurement_info_" + i ).show();
+}
+
+function create_size_option(){
+	var size_val_arr = [];
+	//循环得到size的val放入数组
+	for(var i=1;i<15;i++){
+		var id = "size_" + id_to_dblchar_str(i);
+		if( $("#" + id ).length > 0 && $("#" + id ).val() != "" ){
+			size_val_arr[i] = $("#" + id ).val();
+		}else{
+			break;
+		}
+	}
+	//清空原有的option
+	$("#Sample_size").html("");
+	//把val做成option放入select
+	var option_str = '<option value="">Please select</option>';
+	for(var i = 1;i<size_val_arr.length;i++){
+		option_str += '<option value="' + size_val_arr[i] + '">' + size_val_arr[i] + '</option>';
+	}
+	$("#Sample_size").append(option_str);
+	//复制到其他部分
+	for(var i=1;i<=10;i++){
+		var id = "Sample_size" + id_to_dblchar_str(i);
+		if( $("#" + id ).length > 0 ){
+			$("#" + id ).html("");
+			var option = $("#Sample_size").children("option").clone();
+			$("#" + id ).append(option);
+		}else{
+			break;
+		}
+	}
+	//click style
+	$("#Template").removeClass();
+	$("#Typing").removeClass();
+	$("#Template").addClass("change_tip");
+	$("#Typing").addClass("change_tip_click");
+	//div switch
+	$("#Template_div").hide();
+	$("#Typing_div").show();
 }	
 
 
@@ -678,16 +718,7 @@ $(document).ready(function (){
 		$("#Template_div").show();
 		$("#Typing_div").hide();
 	});
-	$("#Typing").on("click",function(){
-		//click style
-		$("#Template").removeClass();
-		$("#Typing").removeClass();
-		$("#Template").addClass("change_tip");
-		$("#Typing").addClass("change_tip_click");
-		//div switch
-		$("#Template_div").hide();
-		$("#Typing_div").show();
-	});
+	$("#Typing").on("click",create_size_option());
 	
 	//Template
 	var add_size_count = 0;
