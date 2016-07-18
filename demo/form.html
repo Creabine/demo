@@ -471,7 +471,7 @@ function draw_qty_info( jdata ){
 			//再生成上边的color部分：
 			// class="po_color" 的div
 			var po_color_title = '<div class="po_info_title_left">Color</div>';
-			var po_color_input = '<input type="text" id="po_' + i + '_color_' + j + '_val" name="po_' + i + '_color_' + j + '_val" class="color" value="' + jdata.po[i].colors[j].color + '">';
+			var po_color_input = '<input type="text" id="po_' + i + '_color_' + j + '_val" name="po_' + i + '_color_' + j + '_val" class="color" value="' + jdata.po[i].colors[j].color + '" disabled="disabled">';
 			var po_color_qty = '<div class="po_info_title_right"><span class="input_total_qty" id="po_' + i + '_color_' + j + '_qty">' + color_input_qty + '</span> /' + jdata.po[i].colors[j].quantity + ' </div>';
 			//顺便计算总数
 			total_quantity_input += color_input_qty;
